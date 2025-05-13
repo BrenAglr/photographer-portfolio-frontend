@@ -1,15 +1,19 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Fuente personalizada */
+@font-face {
+  font-family: "Brasley";
+  src: url("/fonts/brasley-medium.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Colores base */
+:root {
+  --background: #FDE5C3;
+  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +23,9 @@
   }
 }
 
+/* Aplica Brasley a todo el sitio por defecto */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Brasley', sans-serif;
 }
