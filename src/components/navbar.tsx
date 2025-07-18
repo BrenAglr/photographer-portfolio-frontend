@@ -1,56 +1,80 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    if (!isHome) {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [isHome]);
+
+  const navBgClass = isHome
+    ? "bg-transparent"
+    : scrolled
+    ? "bg-transparent"
+    : "bg-chocolate";
 
   const sections = [
-    { slug: "eventos-sociales", label: "Eventos Sociales" },
-    { slug: "naturaleza", label: "Naturaleza" },
-    { slug: "foto-producto", label: "Foto Producto" },
-    { slug: "sesiones", label: "Sesiones de Fotos" },
+    { slug: "Eventos-sociales", label: "Eventos sociales" },
+    { slug: "Naturaleza", label: "Naturaleza" },
+    { slug: "Foto-producto", label: "Foto producto" },
+    { slug: "Sesiones", label: "Sesiones de fotos" },
+    { slug: "Contenido-para-redes", label: "Contenido para redes" },
   ];
 
+  const desktopLinkStyle =
+    "relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-wheat after:transition-all after:duration-300 hover:after:w-full";
+
   return (
-    <nav className="bg-powder text-chocolate shadow-lg fixed top-0 left-0 right-0 z-50">
+    <nav
+      className={`${navBgClass} backdrop-blur-[2px] text-wheat shadow-lg fixed top-0 left-0 right-0 z-50 transition-colors duration-300`}
+    >
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
         <Link href="/" className="text-lg font-bold">
           <div className="flex items-center">
-            <img
-              src="/photos/cisa.png"
-              alt="Logo"
-              className="h-8 w-auto"
-            />
+            <img src="/photos/cisaque.png" alt="Logo" className="h-8 w-auto" />
           </div>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 items-center relative">
-          <Link href="/" className="hover:text-wheat transition">
+        <div className="hidden md:flex space-x-6 items-center relative text-sm md:text-base">
+          <Link href="/" className={desktopLinkStyle}>
             Inicio
           </Link>
-          <Link href="/acerca" className="hover:text-wheat transition">
+          <Link href="/acerca" className={desktopLinkStyle}>
             Acerca de mí
           </Link>
-          <Link href="/contacto" className="hover:text-wheat transition">
+          <Link href="/contacto" className={desktopLinkStyle}>
             Contacto
           </Link>
 
-          {/* Secciones dropdown (clic + animación) */}
+          {/* Dropdown: Secciones */}
           <div className="relative">
             <button
               onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
-              className="hover:text-wheat transition"
+              className={`${desktopLinkStyle} transition`}
             >
               Secciones ▼
             </button>
 
             <div
-              className={`absolute left-0 mt-2 w-48 bg-powder border rounded-xl shadow-lg z-10 origin-top transition-all duration-200 ease-out ${
+              className={`absolute -left-3 mt-2 w-56 bg-wheat border rounded-xl shadow-lg z-10 origin-top transition-all duration-200 ease-out ${
                 isSubMenuOpen
                   ? "opacity-100 scale-100"
                   : "opacity-0 scale-95 pointer-events-none"
@@ -61,7 +85,7 @@ export const Navbar: React.FC = () => {
                   key={slug}
                   href={`/sections/${slug}`}
                   onClick={() => setIsSubMenuOpen(false)}
-                  className={`block px-4 py-2 transition-colors hover:bg-wheat hover:text-powder ${
+                  className={`block px-4 py-2 text-chocolate transition-colors hover:bg-chocolate hover:text-wheat ${
                     index === 0 ? "rounded-t-xl" : ""
                   } ${index === sections.length - 1 ? "rounded-b-xl" : ""}`}
                 >
@@ -74,9 +98,7 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile hamburger icon */}
         <button
-          className={`md:hidden focus:outline-none ${
-            isMenuOpen ? "text-wheat" : "text-chocolate"
-          }`}
+          className="md:hidden text-wheat focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
