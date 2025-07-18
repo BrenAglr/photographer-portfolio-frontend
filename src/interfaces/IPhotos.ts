@@ -8,4 +8,10 @@ export interface ISectionPhotos {
         title: string;
         images: IPhotos[];
     }
-  }
+}
+
+export interface ISectionGroup {
+    groupName: string;
+    groupSlug: string;
+    images: IPhotos[];
+}
