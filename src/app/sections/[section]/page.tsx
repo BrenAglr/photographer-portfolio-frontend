@@ -1,10 +1,10 @@
 import { SectionGalleryClient } from "@/components/sectionGalleryClient";
 
-interface Props {
+export default function SectionGallery({
+  params,
+}: {
   params: { section: string };
-}
-
-export default function SectionGallery({ params }: Props) {
+}) {
   const { section } = params;
 
   return (
