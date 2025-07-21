@@ -1,10 +1,11 @@
 import { SectionGalleryClient } from "@/components/sectionGalleryClient";
 
-// Elimina el tipo Props y usa directamente en la función
 export default function SectionGallery({
   params,
+  searchParams, // Añade esto aunque no lo uses
 }: {
   params: { section: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }) {
   const { section } = params;
 
