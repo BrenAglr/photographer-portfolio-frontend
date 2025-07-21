@@ -1,14 +1,11 @@
-// src/app/sections/[section]/page.tsx
-
 import { SectionGalleryClient } from "@/components/sectionGalleryClient";
 
-type Props = {
-  params: {
-    section: string;
-  };
-};
-
-export default function SectionGallery({ params }: Props) {
+// Elimina el tipo Props y usa directamente en la función
+export default function SectionGallery({
+  params,
+}: {
+  params: { section: string };
+}) {
   const { section } = params;
 
   return (
