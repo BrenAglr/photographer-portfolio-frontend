@@ -57,10 +57,10 @@ export const Navbar: React.FC = () => {
           <Link href="/" className={desktopLinkStyle}>
             Inicio
           </Link>
-          <Link href="/acerca" className={desktopLinkStyle}>
+          <Link href="/about" className={desktopLinkStyle}>
             Acerca de mí
           </Link>
-          <Link href="/contacto" className={desktopLinkStyle}>
+          <Link href="/contact" className={desktopLinkStyle}>
             Contacto
           </Link>
 
@@ -141,10 +141,10 @@ export const Navbar: React.FC = () => {
           <Link href="/" className="block hover:text-wheat transition">
             Inicio
           </Link>
-          <Link href="/acerca" className="block hover:text-wheat transition">
+          <Link href="/about" className="block hover:text-wheat transition">
             Acerca de mí
           </Link>
-          <Link href="/contacto" className="block hover:text-wheat transition">
+          <Link href="/contact" className="block hover:text-wheat transition">
             Contacto
           </Link>
 

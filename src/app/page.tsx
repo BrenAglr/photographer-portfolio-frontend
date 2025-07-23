@@ -5,8 +5,8 @@ import { SectionPreview } from "@/components/sectionPreview";
 import { IPhotos } from "@/interfaces/IPhotos";
 
 const sections = [
-  { slug: "Eventos-sociales", label: "Eventos sociales" },
   { slug: "Naturaleza", label: "Naturaleza" },
+  { slug: "Eventos-sociales", label: "Eventos sociales" },
   { slug: "Foto-producto", label: "Foto producto" },
   { slug: "Sesiones", label: "Sesiones de fotos" },
   { slug: "Contenido-para-redes", label: "Contenido redes" },

@@ -101,3 +101,5 @@ export const GroupPreview: React.FC<Props> = ({ section, group, images, displayN
 
   );
 };
+
+export default GroupPreview

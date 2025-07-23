@@ -24,3 +24,4 @@ export const GalleryGrid: React.FC<Props> = ({ images, onImageClick }) => {
   );
 };
 
+export default GalleryGrid

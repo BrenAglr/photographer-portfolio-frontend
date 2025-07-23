@@ -3,8 +3,9 @@
 
 import Image from "next/image";
 import ContactButton from "./contactButton";
+import React from "react";
 
-const BannerSlogan = () => {
+export const BannerSlogan: React.FC = () => {
   return (
     <section className="relative w-full min-h-[75vh] border-spacing-2 flex items-center justify-center text-white overflow-hidden -mt-16">
       {/* Fondo */}

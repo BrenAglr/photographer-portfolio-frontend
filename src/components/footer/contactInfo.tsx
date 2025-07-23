@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export default function ContactInfo() {
+export const ContactInfo: React.FC = () => {
   return (
     <div className="space-y-2">
       <p className="text-base">cisa.ph07@gmail.com</p>
@@ -30,3 +30,4 @@ export default function ContactInfo() {
     </div>
   );
 }
+export default ContactInfo
