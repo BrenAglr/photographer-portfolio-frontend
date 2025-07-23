@@ -63,3 +63,5 @@ export const SectionPreview: React.FC<Props> = ({ sectionSlug, sectionLabel, ima
     </div>
   );
 };
+
+export default SectionPreview

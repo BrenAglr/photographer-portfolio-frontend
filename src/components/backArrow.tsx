@@ -13,3 +13,4 @@ export const BackArrow: React.FC<Props> = ({ href }) => {
     </Link>
   );
 };
+export default BackArrow

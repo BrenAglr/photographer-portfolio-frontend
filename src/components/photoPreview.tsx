@@ -9,7 +9,7 @@ interface Props {
     group: string
 }
 
-const PhotosPreview = ({ section, group }: Props) => {
+export const PhotosPreview = ({ section, group }: Props) => {
     const [photos, setPhotos] = useState<IPhotos[]>([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState("")

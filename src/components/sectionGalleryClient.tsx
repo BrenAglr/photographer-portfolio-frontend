@@ -69,3 +69,5 @@ export const SectionGalleryClient = ({ section }: Props) => {
     </div>
   );
 };
+
+export default SectionGalleryClient

@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import SectionsMenu from "./sectionsMenu";
 import ContactInfo from "./contactInfo";
 
 
-export default function Footer() {
+export const Footer: React.FC = () => {
   const [showServices, setShowServices] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
@@ -48,3 +48,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer

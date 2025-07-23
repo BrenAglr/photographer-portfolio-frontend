@@ -1,6 +1,7 @@
 import Link from "next/link";
+import React from "react";
 
-export default function SectionsMenu() {
+export const SectionsMenu: React.FC = () => {
   return (
     <div className="flex flex-col sm:flex-row sm:justify-between gap-8">
       <div>
@@ -22,3 +23,5 @@ export default function SectionsMenu() {
     </div>
   );
 }
+
+export default SectionsMenu

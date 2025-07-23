@@ -68,3 +68,5 @@ export const ImageModal: React.FC<Props> = ({ imgUrl, onClose, onPrev, onNext })
     </div>
   );
 };
+
+export default ImageModal

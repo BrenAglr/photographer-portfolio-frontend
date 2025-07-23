@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { validateContactForm } from '@/helpers/validateContactForm';
 import { ContactFormData, ContactFormErrors } from '@/interfaces/contactForm';
 
-export default function ContactForm() {
+export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     company: '',
@@ -210,3 +210,5 @@ export default function ContactForm() {
     </div>
   );
 }
+
+export default ContactForm

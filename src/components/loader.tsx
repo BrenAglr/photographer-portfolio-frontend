@@ -12,3 +12,5 @@ export const Loader: React.FC<Props> = ({ logoSrc }) => {
     </div>
   );
 };
+
+export default Loader

@@ -1,9 +1,8 @@
-
 // components/acerca/AcercaIntro.tsx
 import Image from "next/image";
 import { motion } from "framer-motion"
 
-export default function AcercaIntro() {
+export const AcercaIntro: React.FC = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -29,3 +28,5 @@ export default function AcercaIntro() {
     </motion.div>
   );
 }
+
+export default AcercaIntro

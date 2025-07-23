@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 // components/acerca/AcercaFrase.tsx
-export default function AcercaFrase() {
+export const AcercaFrase: React.FC = () => {
   return (
     <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -18,3 +18,4 @@ export default function AcercaFrase() {
 
   );
 }
+export default AcercaFrase

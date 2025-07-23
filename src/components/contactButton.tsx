@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import React from "react";
 
-export default function contactButton() {
+export const contactButton: React.FC = () => {
   return (
     <Link
         href="/contacto"
@@ -12,3 +13,5 @@ export default function contactButton() {
     </Link>
   );
 }
+
+export default contactButton

@@ -3,7 +3,7 @@ import ContactText from "@/components/contactText"
 import Image from "next/image"
 
 
-const Contact = () => {
+export const Contact: React.FC = () => {
   return (
    <section className="w-full min-h-[90vh] flex flex-col lg:flex-row px-8 py-8 gap-12 relative bg-cover bg-center bg-amber-100">
        <Image

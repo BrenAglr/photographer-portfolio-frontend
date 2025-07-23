@@ -7,7 +7,7 @@ const datos = [
   { label: "Cumple", value: "07/08/2000" },
 ];
 
-export default function AcercaDatos() {
+export const AcercaDatos: React.FC = () => {
   return (
     <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -29,3 +29,5 @@ export default function AcercaDatos() {
     </motion.div>
   );
 }
+
+export default AcercaDatos
