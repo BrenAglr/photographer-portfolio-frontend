@@ -6,7 +6,7 @@ export const ContactInfo: React.FC = () => {
     <div className="space-y-2">
       <p className="text-base">cisa.ph07@gmail.com</p>
       <p className="text-base">+54 261 541 6440</p>
-      <Link href="/contacto" className="text-sm ">
+      <Link href="/contact" className="text-sm ">
         Contacto
       </Link>
       <div className="flex gap-4 mt-2">

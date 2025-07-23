@@ -7,7 +7,7 @@ export const ContactText: React.FC = () => {
   return (
     <div className="flex flex-col h-full justify-top sm:p-10 text-chocolate">
       <h2 className="text-3xl sm:text-4xl font-semibold leading-tight mb-4">
-        ¿Tenés una idea en mente? Contame y hagámosla realidad juntas.
+        Todo gran proyecto comienza con una idea. Contame la tuya y le damos forma.
       </h2>
 
       <div className="transition">
