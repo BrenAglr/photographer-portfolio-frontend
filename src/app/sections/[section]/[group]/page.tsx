@@ -9,7 +9,7 @@ import { ImageModal } from "@/components/imagenModal";
 import { Loader } from "@/components/loader";
 import { IPhotos } from "@/interfaces/IPhotos";
 
-export const GroupPage: React.FC = () => {
+export const GroupPage = () => {
   const { section, group } = useParams() as { section: string; group: string };
   const [images, setImages] = useState<IPhotos[]>([]);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);

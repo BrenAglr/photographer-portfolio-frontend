@@ -5,7 +5,7 @@ interface PageProps {
   params: Promise<{ section: string }>;
 }
 
-export const SectionGallery: React.FC<PageProps> = async ({params}: PageProps) => {
+export const SectionGallery = async ({params}: PageProps) => {
     const resolvedParams = await params
     const { section } = resolvedParams;
 
