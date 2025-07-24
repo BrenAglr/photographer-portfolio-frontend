@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
         <div className="w-full lg:w-1/2">
           <div className="lg:hidden mb-4">
             <button
-              className="text-powder px-2 py-2 underline"
+              className="text-wheat px-2 py-2 underline"
               onClick={() => setShowServices(!showServices)}
             >
               Información

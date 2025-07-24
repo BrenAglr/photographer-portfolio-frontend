@@ -199,8 +199,8 @@ export const ContactForm: React.FC = () => {
               disabled={!isFormValid}
               className={`text-sm px-6 py-2 rounded-md transition duration-300 ${
                 isFormValid
-                  ? 'bg-amber-500 text-graywhite hover:bg-opacity-80'
-                  : 'bg-gray-500 text-graywhite cursor-not-allowed'
+                  ? 'bg-amber-500 text-wheat hover:bg-opacity-80'
+                  : 'bg-gray-500 text-gray-100 cursor-not-allowed'
               }`}
             >
               Enviar

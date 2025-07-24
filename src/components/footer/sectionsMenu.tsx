@@ -15,7 +15,7 @@ export const SectionsMenu: React.FC = () => {
         </ul>
       </div>
       <div>
-        <h4 className="text-sm font-semibold mb-2 uppercase">Sobre mi</h4>
+        <h4 className="text-sm font-semibold mb-2 uppercase">Conoce a CISA</h4>
         <ul className="space-y-1 text-base">
           <li><Link href="/about">Sobre mi</Link></li>
         </ul>
