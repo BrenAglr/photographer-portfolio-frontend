@@ -1,4 +1,5 @@
 // components/acerca/AcercaIntro.tsx
+// cambio de prueba
 import Image from "next/image";
 import { motion } from "framer-motion"
 
